@@ -9,7 +9,7 @@
     <h2 th:case="null">No users found!</h2>
     <div th:case="*">
         <h2>Users</h2>
-        <table>
+        <table border="1" width="999">
             <thead>
             <tr>
                 <th>Id</th>
@@ -29,8 +29,14 @@
                 <td th:text="${user.age}"></td>
                 <td th:text="${user.email}"></td>
                 <td th:text="${user.password}"></td>
-                <td><a th:href="@{user-update/{id}(id=${user.id})}">Edit</a></td>
-                <td><a th:href="@{user-delete/{id}(id=${user.id})}">Delete</a></td>
+                <td>
+                    <form th:action="@{user-update/{id}(id=${user.id})}" target="_self">
+                        <button>Edit</button>
+                    </form>
+                    <form th:method="DELETE" th:action="@{user-delete/{id}(id=${user.id})}" target="_self">
+                        <button>Delete</button>
+                    </form>
+                </td>
             </tr>
             </tbody>
         </table>
