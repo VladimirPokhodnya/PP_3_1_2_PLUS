@@ -15,7 +15,9 @@
                 <th>Id</th>
                 <th>First name</th>
                 <th>Last name</th>
+                <th>Age</th>
                 <th>Email</th>
+                <th>Password</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -24,7 +26,9 @@
                 <td th:text="${user.id}"></td>
                 <td th:text="${user.firstName}"></td>
                 <td th:text="${user.lastName}"></td>
+                <td th:text="${user.age}"></td>
                 <td th:text="${user.email}"></td>
+                <td th:text="${user.password}"></td>
                 <td><a th:href="@{user-update/{id}(id=${user.id})}">Edit</a></td>
                 <td><a th:href="@{user-delete/{id}(id=${user.id})}">Delete</a></td>
             </tr>

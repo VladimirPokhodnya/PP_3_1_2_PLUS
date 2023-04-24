@@ -35,7 +35,9 @@ public class UserController {
 
     @PostMapping("/user-create")
     public String createUser(User user){
-        userService.saveUser(user);
+        if(user != null) {
+            userService.saveUser(user);
+        }
         return "redirect:/";
     }
 

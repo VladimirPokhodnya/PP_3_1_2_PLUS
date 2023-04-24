@@ -14,8 +14,15 @@
     <label for="lastName">Last name</label>
     <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
     <br/>
+    <label for="lastName">Age</label>
+    <input type="text" th:field="*{age}" id="age" placeholder="Age">
+    <br/>
     <label for="lastName">Email</label>
-    <input type="text" th:field="*{email}" id="email" placeholder="Email">
+    <input type="email" th:field="*{email}" id="email" onfocus="this.value=''" placeholder="Email">
+    <br/>
+    <label for="lastName">Password</label>
+    <input type="password" th:field="*{password}" id="password" onfocus="this.value=''" placeholder="Password">
+    <br/>
     <input type="submit" value="Update User">
 </form>
 </body>
